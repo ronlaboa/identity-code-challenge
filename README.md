@@ -5,6 +5,9 @@ A solution to validate and store identity records
 
 To run the validator in terminal 
 
+`gem install activesupport`
+`gem install adroit-age`
+
 `ruby get_user_input.rb`
 
 This will output the valid records to 'output/valid_records.json'
