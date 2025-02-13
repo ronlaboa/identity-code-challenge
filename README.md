@@ -8,7 +8,7 @@ To run the validator in terminal
 `gem install activesupport`
 `gem install adroit-age`
 
-`ruby get_user_input.rb`
+`ruby validate_identity.rb`
 
 This will output the valid records to 'output/valid_records.json'
 This will output the invalid records to 'output/invalid_records.json'

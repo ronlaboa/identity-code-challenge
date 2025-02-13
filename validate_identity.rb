@@ -6,7 +6,7 @@ require_relative 'identity_record_validation/address_validation'
 require_relative 'identity_record_validation/years_at_address_validation'
 require_relative 'identity_record_validation/passport_and_national_insurance_validation'
 require_relative 'identity_record_validation/validation_errors'
-require 'active_support'
+# require 'active_support'
 
 valid_records = []
 invalid_records = []
@@ -16,13 +16,6 @@ invalid_records = []
 
 # parse xml file to hash
 identity_records_hash = IdentityRecordValidation::FileUtility.parse_xml_to_hash('input/records.xml')
-
-
-# puts identity_records_hash
-# IdentityRecordValidation::FileUtility.write_hash_to_json('new_records.json', identity_records_hash)
-
-
-# puts identity_records_hash['data']['people'].first
 identity_records_hash['data']['people'].each do |identity|
   IdentityRecordValidation::FirstNameValidation.validate_first_name(identity)
   IdentityRecordValidation::LastNameValidation.validate_last_name(identity)
